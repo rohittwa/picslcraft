@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ImageEditing.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>picslCraft</title>
+</head>
+<body>
+    <nav>
+        <div id="topBox">
+            <a href="index.php"><img src="images/picslCraftLogo2.jpg" id="logo"></a>
+
+            <span id="smallMenu">
+                <div id="menu2"><img src="Images/menu.png" id="line3"></div>
+            </span>
+
+            <span id="menu">
+                <a id="services">Services▸</a>
+                <span id="serviceOptions">
+                    <a href="ImageEditing.html"><li>Image edit</li></a>
+                    <a href="ImageToPDF.php"><li>Image to PDF</li></a>
+                    <a href="FormatChanger.html"><li style="margin-top:-30px;">Format changer</li></a>
+                    <a href="PDFToImage.html"><li>PDF to Image</li></a>
+                </span>
+
+                <a id="about">About▸</a>
+                <span id="aboutOptions">
+                    <a href="AboutUs.html"><li>About Us</li></a>
+                    <a href="Login.php"><li>Contact</li></a>
+                    <a><li style="margin-top:-30px;">Help</li></a>
+                </span>
+            </span>
+
+            <span id="account">
+                <a href="Login.php" id="login">Login</a>
+                <a href="Signin.html" id="signin">Signin</a>
+            </span>
+
+            <div id="menu2nd">
+                <a id="services2">Services▸</a>
+                <a id="about2">About▸</a>
+                <a href="Login.php" id="login2">Login</a>
+                <a href="Signin.html" id="signin2">Signin</a>
+            </div>
+            <span id="serviceOptions2">
+                <a href="ImageEditing.html"><li>Image edit</li></a>
+                <a href="ImageToPDF.php"><li>Image to PDF</li></a>
+                <a href="FormatChanger.html"><li>Format changer</li></a>
+                <a href="PDFToImage.html"><li>PDF to Image</li></a>
+            </span>
+            <span id="aboutOptions2">
+                <a href="AboutUs.html"><li>About Us</li></a>
+                <a href="Login.php"><li>Contact</li></a>
+                <a><li>Help</li></a>
+            </span>
+        </div>
+    </nav>
+
+    <div id="main">
+        <div id="toolBox">
+            <div id="tools">
+                <button class="button"><img src="images/brush_FILL0_wght400_GRAD0_opsz24.svg" id="brush" title="Brush" disabled></button>
+
+                <button class="button"><img src="images/crop_FILL0_wght400_GRAD0_opsz24.svg" id="crop" title="Crop"></button>
+
+                <button class="button"><img src="images/font-solid.svg"  id="text" title="Text"></button>
+
+                <button class="button"><img src="images/colors_FILL0_wght400_GRAD0_opsz24.svg" title="Paint" id="paint"></button>
+
+                <button class="button"><img src="images/pageless_FILL0_wght400_GRAD0_opsz24.svg" title="Rectangle Select" id="rectSelect"></button>
+
+                <button class="button"><img src="images/circle_FILL0_wght400_GRAD0_opsz24.svg" title="Ellipse Select" id="ellipse"></button>
+
+                <button class="button"><img src="Images/search_FILL0_wght400_GRAD0_opsz24.svg" title="Zoom In Out" id="zoomInOut"></button>
+
+                <button class="button"><img src="Images/rotate-left-solid.svg" title="Rotate Left" id="rotLeft"></button>
+
+                <button class="button"><img src="Images/rotate-right-solid.svg" title="Rotate Right" id="rotRight"></button>
+
+                <button class="button"><img src="Images/select_all_FILL0_wght400_GRAD0_opsz24.svg" title="Select All" id="selAll"></button>
+
+                <button class="button"><img src="Images/filter_list_FILL0_wght400_GRAD0_opsz24.svg" title="Filters" id="filters"></button>
+
+                <button class="button"><img src="Images/undo_FILL0_wght400_GRAD0_opsz24.svg" title="Undo" id="undo"></button>
+
+                <button class="button"><img src="Images/redo_FILL0_wght400_GRAD0_opsz24.svg" title="Redo" id="redo"></button>
+            </div>
+
+            <div id="toolOptions">
+                
+            </div>
+        </div>
+
+        <div id="import">
+            <span><img src="Images/file-import-solid.jpg" onclick="openFile()" title="Import File" id="importImg"></span>
+            <input type="file" id="input">
+        </div>
+
+        <div id="image">
+            <canvas id="canva" height="570"></canvas>
+        </div>
+
+        <div id="down">
+            <button id="download">Download</button>
+        </div>
+    
+        <canvas id="canva2"></canvas>
+
+        <div id="layerBox">
+            
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="cBox">
+            <span id="menu2">
+                <table>
+                    <tr>
+                        <th>Services</th>
+                        <th class="c2">About</th>
+                    </tr>
+
+                    <tr>
+                        <td>Image Edit</td>
+                        <td class="c2">About Us</td>
+                    </tr>
+
+                    <tr>
+                        <td>Draw</td>
+                        <td class="c2">Contact</td>
+                    </tr>
+
+                    <tr>
+                        <td>Image to PDF</td>
+                        <td class="c2">Help</td>
+                    </tr>
+
+                    <tr>
+                        <td>PDF editing</td>
+                        <td class="c2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Format changing</td>
+                        <td class="c2"></td>
+                    </tr>
+                </table>
+            </span>
+
+            <span id="follow">
+                <div id="icons">
+                    <img src="images/facebook.png">
+                    <img src="images/linkedin.png">
+                    <img src="images/gmail.png">
+                    <img src="images/instagram.png">
+                    <img src="images/youtube.png">
+                    <img src="images/twitter.png">
+                </div>
+
+                <div id="tp">
+                    <span>Terms of Services</span>
+                    <span id="priv">Privacy Policy</span>
+                </div><br><br><br>
+            </span>
+
+            <div id="copy">Copyright &copy 2023-2024 Rohit Company All rights reserved.</div>
+        </div>
+    </div>
+
+    <script src="ImageEditing.js"></script>
+</body>
+</html>

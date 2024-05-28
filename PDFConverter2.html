@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #images {
+            background-color: blueviolet;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #download {
+            width: 120px;
+            height: 40px;
+            background-color: blueviolet;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: white;
+            display: none;
+        }
+        #imgContainer, #box3, #box1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha512-cLuyDTDg9CSseBSFWNd4wkEaZ0TBEpclX0zD3D6HjI19pO39M58AgJ1SjHp6c7ZOp0/OCRcC2BCvvySU9KJaGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">
+        <input type="file" id="images" accept=".jpg, .jpeg, .png" multiple>
+    </div>
+    <br><br>
+    <div id="imgContainer"></div>
+    <div id="box3">
+        <button id="download" onclick="savePdf()">Download PDF</button>
+    </div>
+
+    <script>
+        var imagesInput = document.getElementById("images");
+        var downloadButton = document.getElementById("download");
+        var imgContainer = document.getElementById("imgContainer");
+        var doc = new jsPDF();
+
+        imagesInput.addEventListener("change", function () {
+            var files = imagesInput.files;
+            var currentIndex = 0;
+
+            function addImageToPage(index) {
+                var img = new Image();
+                var aspectRatio;
+
+                var file = files[index];
+
+                img.onload = function () {
+                    // Calculate the aspect ratio to maintain image proportions
+                    aspectRatio = img.width / img.height;
+
+                    // Set the page size based on image orientation
+                    if (aspectRatio > 1) {
+                        doc.addImage(img, 'JPEG', 10, 10, doc.internal.pageSize.width - 20, (doc.internal.pageSize.width - 20) / aspectRatio);
+                    } else {
+                        doc.addImage(img, 'JPEG', 10, 10, (doc.internal.pageSize.width - 20) * aspectRatio, doc.internal.pageSize.height - 20);
+                    }
+
+                    // If there are more images, add a new page and proceed
+                    if (index + 1 < files.length) {
+                        doc.addPage();
+                        addImageToPage(index + 1);
+                    } else {
+                        // If all images are added, show the download button
+                        downloadButton.style.display = "block";
+                    }
+                };
+
+                img.src = URL.createObjectURL(file);
+                var newImg = document.createElement("img");
+                newImg.src = img.src;
+                newImg.style.width = "40%";
+                newImg.style.height = "auto";
+                imgContainer.appendChild(newImg);
+
+                var br = document.createElement("br");
+                imgContainer.appendChild(br);
+                imgContainer.appendChild(br);
+            }
+
+            // Start adding images to pages
+            addImageToPage(currentIndex);
+        });
+
+        // Downloading pdf.
+        function savePdf() {
+            doc.save("multiPagePdf.pdf");
+        }
+    </script>
+</body>
+</html>

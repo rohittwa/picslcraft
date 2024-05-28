@@ -1,0 +1,474 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    padding:10px 0px;
+}
+#topBox{
+    width:60%;
+    margin:auto;
+    position: relative;
+}
+#menu{
+    margin-left:30px;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+#menu a{
+    font-size: 13pt;
+    font-family: poppins;
+}
+#menu a:nth-child(3){
+    margin-left:20px;
+}
+#logo{
+    width:50px;
+    display: inline-block;
+}
+#account{
+    float: right;
+    margin-top:13px;
+    cursor: pointer;
+}
+#username{
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: rgb(12, 12, 81);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 50px;
+    height:50px;
+    font-family: sans-serif;
+}
+#acOptions{
+    position: absolute;
+    background-color: rgb(230, 230, 230);
+    font-family: poppins;
+    font-size:11pt;
+    width:90px;
+    margin-top:4px;
+    padding:15px 10px;
+    border-radius:5px;
+    color:rgb(12, 12, 81);
+    line-height: 30px;
+    display: none;
+    margin-left:0px;
+    border:1px solid black;
+    right:0;
+}
+#acOptions a{
+    text-decoration: none;
+    font-size:11pt;
+    color:rgb(12, 12, 81);
+}
+
+#main{
+    margin:40px auto;
+    width:60%;
+    display: flex; /* Add flex display */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Add space between #slogan and #container */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+#slogan{
+    font-family: sans-serif;
+    font-size:2.5vw;
+    width:260px;
+    color:rgb(12, 12, 81);
+    letter-spacing: 8px;
+    line-height:58px;
+}
+
+#container{
+    width: calc(100% - 320px); /* Adjust width */
+    background: rgb(230, 230, 230);
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+#leftArrow, #rightArrow{
+    width:3vw;
+    height:3vw;
+    background: rgb(12, 12, 81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size:2.6vw;
+}
+#leftArrow:hover, #rightArrow:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#leftArrow{
+    float:left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#rightArrow{
+    float: right;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#imgBox{
+    width:33vw;
+    display: flex;
+    margin: 0px auto;
+    overflow: hidden;
+}
+#imgBox img{
+    width:33vw;
+}
+
+#intro{
+    width:60%;
+    margin:30px auto;
+    text-align:justify;
+    font-family: arial;
+    font-size: 13pt;
+    line-height:25px;
+}
+#intro li{
+    margin-left:20px;
+    margin-top: 20px;
+}
+*::selection{
+    background-color: rgb(12, 12, 81);
+    color:white;
+}
+
+#footer{
+    width:100%;
+    margin:40px 0px;
+    position: relative;
+    bottom:0;
+    box-sizing: border-box;
+    margin-bottom:0px;
+    background-color: rgb(12, 12, 81);
+    padding-bottom: 50px;
+}
+#cBox{
+    width:60%;
+    margin:0px auto;
+    height:289px;
+    box-sizing: border-box;
+    position: relative;
+}
+#menu2{
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+#menu2 table{
+
+}
+th, td{
+    text-align:left;
+    font-family: poppins;
+    font-size:12pt;
+    padding:5px 0px;
+    color:white;
+}
+th::selection, td::selection{
+    color:rgb(12, 12, 81);
+    background-color:white;
+}
+td{
+    font-size:10pt;
+}
+.c2{
+    padding-left:60px;
+}
+#follow{
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:0;
+    float:right;
+}
+#icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#icons img{
+    width:30px;
+    height:30px;
+    margin-left:20px;
+}
+#icons img:hover{
+    cursor:pointer;
+}
+#copy{
+    color:white;
+    font-family: poppins;
+    font-size:10pt;
+    margin-top:280px;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    text-align:center;
+}
+
+#serviceOptions{
+    position: absolute;
+    background-color: rgb(230, 230, 230);
+    font-family: poppins;
+    font-size:11pt;
+    width:120px;
+    margin-top:30px;
+    left:0;
+    padding:15px 10px;
+    border-radius:5px;
+    color:rgb(12, 12, 81);
+    line-height: 30px;
+    display: none;
+    margin-left:0px;
+    border:1px solid black;
+}
+#serviceOptions li{
+    list-style: none;
+}
+#serviceOptions a{
+    text-decoration: none;
+    font-size:11pt;
+    color:rgb(12, 12, 81);
+}
+
+#aboutOptions{
+    position: absolute;
+    background-color: rgb(230, 230, 230);
+    font-family: poppins;
+    font-size:11pt;
+    width:70px;
+    margin-top:30px;
+    left:0;
+    padding:15px 10px;
+    border-radius:5px;
+    color:rgb(12, 12, 81);
+    line-height: 30px;
+    margin-left:100px;
+    display: none;
+    border:1px solid black;
+}
+#aboutOptions li{
+    list-style: none;
+}
+
+#tp{
+    color:white;
+    font-family: poppins;
+    font-size:10pt;
+    margin-top:20px;
+    float:right;
+}
+#tp span:nth-child(2){
+    margin-left:30px;
+}
+
+#smallMenu{
+    display:none;
+}
+
+@media screen and (max-width:710px){
+    .card{
+        width:140px;
+        height:150px;
+    }
+    #row1 a:not(:last-child), #row2 a:not(:last-child){
+        margin-right: 15px;
+    }
+    #row2 span{
+        margin-top: 15px;
+    }
+
+    #icons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width:100px;
+    }
+    #icons img{
+        width:20px;
+        height:20px;
+        margin-left:20px;
+    }
+    .c2{
+        display:none;
+    }
+}
+
+@media screen and (max-width:1420px)
+{
+    #slogan{
+        font-family: sans-serif;
+        font-size:2.3vw;
+        width:60vw;
+        letter-spacing: 8px;
+        line-height:58px;
+        display: block;
+        text-align: center;
+    }
+
+    #container{
+        width: calc(100% - 100px); /* Adjust width */
+        background: rgb(230, 230, 230);
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    #leftArrow, #rightArrow{
+        width:3vw;
+        height:3vw;
+        background: rgb(12, 12, 81);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        font-size:2.6vw;
+    }
+    #leftArrow:hover, #rightArrow:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    #leftArrow{
+        float:left;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #rightArrow{
+        float: right;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    #imgBox{
+        width:45vw;
+        display: flex;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+    #imgBox img{
+        width:45vw;
+    }
+}
+
+@media screen and (max-width:1250px)
+{
+    #container{
+        width: calc(100% - 80px); /* Adjust width */
+    }
+}
+
+@media screen and (max-width:1025px)
+{
+    #container{
+        width: calc(100% - 60px); /* Adjust width */
+    }
+}
+
+@media screen and (max-width:798px)
+{
+    #container{
+        width: calc(100% - 40px); /* Adjust width */
+    }
+    #slogan{
+        font-size:14pt;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:573px)
+{
+    #container{
+        width: 290px;
+    }
+    #imgBox{
+        width:260px;
+    }
+    #imgBox img{
+        width:260px;
+    }
+    #slogan{
+        font-size:14pt;
+        line-height: 38px;
+        margin-top:30px;
+    }
+    #intro{
+        font-size:11pt;
+    }
+
+    #menu{
+        display:none;
+    }
+    #account{
+        display:none;
+    }
+    #logo{
+        float:right;
+        width:40px;
+        height:40px;
+    }
+    #smallMenu{
+        display:inline-block;
+    }
+    #menu2 img{
+        width:25px;
+        height:25px;
+    }
+    #topBox{
+        display:inline-block;
+        height: 40px;
+        position: absolute;
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+
+@media screen and (max-width:939px){
+    #icons{
+        width:200px;
+        height:100px;
+        margin-top:0px;
+        margin-left:20px;
+        display:flex;
+        align-items:center;
+        justify-content: right;
+        flex-wrap: wrap;
+    }
+    #icons img{
+        width:25px;
+        height:25px;
+    }
+    #tp{
+        font-size:9pt;
+    }
+    th{
+        font-size:11pt;
+    }
+    td{
+        font-size:9pt;
+    }
+    #copy{
+        font-size:9pt;
+    }
+}
+
+@media screen and (max-width:819px)
+{
+    #priv{
+        float:right;
+    }
+}
